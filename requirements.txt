@@ -1,0 +1,10 @@
+transformers
+openai
+langchain
+streamlit
+pandas
+matplotlib
+plotly
+celery
+redis
+docker
