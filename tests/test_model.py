@@ -12,3 +12,4 @@ llm = Llama(model_path=model_path, n_ctx=4096)
 prompt = "Explain how AI safety works."
 output = llm(prompt)
 print(output["choices"][0]["text"])
+

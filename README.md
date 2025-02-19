@@ -1,6 +1,47 @@
 # JailBreakEval
 LLM-generated Jailbreak Evaluation Tool
 
+## Project Structure
+
+```
+JailBreakDefense/
+│── 📁 data/                      # Store datasets (raw and processed)
+│    ├── 📁 jailbreaks/
+│        ├── jailbreaks.json
+│   ├── red_team_small.json       
+    ├── red_team_attempts.jsonl
+│   ├── jailbreak_dataset.json    # Processed dataset for RL training
+│── 📁 embeddings/                 # Store embeddings
+│   ├── X_train.npy
+│   ├── y_train.npy
+│   ├── X_test.npy
+│   ├── y_test.npy
+│── 📁 models/                     # Checkpoints and trained models
+│   ├── best_xgboost_model.pkl         # Trained XGBoost model
+│   ├── rl_agent_checkpoint/      # RL Agent model weights
+│── 📁 scripts/                    # Utility scripts
+│   ├── extract_embeddings.py     # Extracts embeddings from RoBERTa
+│   ├── train_xgboost.py          # Trains XGBoost model
+│   ├── train_rl_agent.py         # Trains RL agent using PPO
+│   ├── adversarial_filter.py     # Deploys the adversarial filter
+    ├── run_aws.sh                 # Shell script to train and evaluate models
+│── 📁 notebooks/                  # Jupyter Notebooks for EDA & Testing
+│   ├── train_models.ipynb
+│── 📁 tests/                      # Unit tests for debugging
+│   ├── test_data.py
+│   ├── test_model.py
+│   ├── test_rl_agent.py
+│── 📁 results/                      # Unit tests for debugging
+│   ├── evaluation_results.json
+│── 📁 configs/                    # Configuration files
+│   ├── ppo_config.json            # RL Agent hyperparameters
+│── .gitignore                      # Ignore large files and logs
+│── requirements.txt                # List of dependencies
+│── README.md                       # Project documentation
+│── setup.py                        # Setup script for installation
+
+```
+
 ## Setting Up the Environment
 
 1. Clone the repository:
