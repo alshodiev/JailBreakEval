@@ -94,7 +94,7 @@ if __name__ == "__main__":
         print(f"Using device: {device}")
 
         save_path = os.getcwd()
-        print(f"Files will be saved in: {os.path.join(save_path, "embeddings")}")
+        print(f"Files will be saved in: {os.path.join(save_path, 'embeddings')}")
 
         # load the JSON file
         try:
