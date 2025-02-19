@@ -11,6 +11,6 @@
 #SBATCH --array=0 #Array jobs for hyperparameter combinations
 
 
-python embedding_extraction.py \    
+python embedding_extr.py \    
                    --batch_size 16 \
                    --model_name roberta-large-openai-detector
