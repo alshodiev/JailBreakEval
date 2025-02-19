@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
         # load the JSON file
         try:
-            with open('red_team_small.json', 'r') as f:
+            with open('data/red_team_small.json', 'r') as f:
                 data = json.load(f)
             print("Successfully loaded JSON file.")
         except Exception as json_error:
