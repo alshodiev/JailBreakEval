@@ -23,3 +23,10 @@ LLM-generated Jailbreak Evaluation Tool
     ```
     streamlit run src/app.py
     ```
+5. To run adversarial test, download model weights of a given model (since my laptop doesn't have GPU, I'm going to just download 1 model) from HuggingFace
+    ```
+    mistral-7b-v0.1.Q4_K_M.gguf 
+    ```
+    
+
+
