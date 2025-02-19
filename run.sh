@@ -10,8 +10,7 @@
 #SBATCH -e job_err_out/extr.err
 #SBATCH --array=0 #Array jobs for hyperparameter combinations
 
-module load gcc/9.4.0 cuda/12.2
 
-python embeddings_extr.py \    
-                   --batch_size 64 \
-                   --model_name roberta-large-openai-detector
+python3 embeddings_extr.py \
+    --batch_size 64 \
+    --model_name roberta-large-openai-detector
