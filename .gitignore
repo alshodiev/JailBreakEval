@@ -6,14 +6,29 @@ __pycache__/
 # C extensions
 *.so
 
-job_err_out/extr.err
-job_err_out/extr.out
+# Added section
 
-results/*.npy
-
-models/*.gguf
 
 jailbreak-env/
+
+# Ignore Slurm job logs
+job_err_out/*
+
+# Ignore numpy files (embeddings, datasets, etc.)
+*.npy
+
+# Ignore trained model checkpoints
+models/*.pkl
+models/rl_agent_checkpoint/
+
+# Ignore cache and environment files
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.env
+
+#---
 
 # Distribution / packaging
 .Python
