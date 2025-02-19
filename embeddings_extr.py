@@ -86,7 +86,6 @@ def extract_embeddings(loader, model, device):
 
     return np.vstack(embeddings), np.concatenate(values)
 
-
 if __name__ == "__main__":
     try:
         args = parse_args()
@@ -137,7 +136,7 @@ if __name__ == "__main__":
         # train-test split
         try:
             train_texts, test_texts, train_scores, test_scores = train_test_split(
-                transcripts, scores, test_size=0.2, random_state=42
+                transcripts, scores, test_size=0.2, random_state=42, shuffle=False
             )
             print("Successfully split data into training and testing sets.")
         except Exception as split_error:
@@ -149,7 +148,7 @@ if __name__ == "__main__":
             train_dataset = HarmfulnessDataset(train_texts, train_scores, tokenizer, max_length)
             test_dataset = HarmfulnessDataset(test_texts, test_scores, tokenizer, max_length)
 
-            train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
+            train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=False)
             test_loader = DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False)
             print("Created datasets and dataloaders.")
         except Exception as dataset_error:
