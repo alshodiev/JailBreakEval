@@ -25,7 +25,6 @@ def evaluate_prompt(model, prompt, max_tokens=100):
     return response
 
 
-
 def evaluate_prompts(model, prompts, output_file="results/evaluation_results.json"):
     results = []
     
